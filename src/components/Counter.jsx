@@ -20,7 +20,7 @@ const Counter = () =>{
     `;
 
     const PageContainer = styled.section`
-        background-color: black;
+        background-color: #c09dc8;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,8 +31,9 @@ const Counter = () =>{
     `;
 
     const Wrapper = styled.div`
-        background-color: white; /* Change to white background */
-        padding: 4em; /* Add padding as needed */
+        background-color: white;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        padding: 4em; 
         border-radius: 6px;
         text-align: center;
 
@@ -40,11 +41,11 @@ const Counter = () =>{
 
     const Head = styled.div`
         p {
-            color: blue; 
+            color: grey; 
         }  
         h1 {
             font-size: 32px; 
-            color: purple; 
+            color: blue; 
             font-weight: bold
         }  
     `;
@@ -55,13 +56,14 @@ const Counter = () =>{
     `;
         
     const StyledButton = styled.button`
-        background-color: #B2BEB5;
+        background-color: #f5f5f5;
         border: 1px solid grey;
         padding: 22px 30px;
         font-size: 2em;
         border-radius: 5px;
         cursor: pointer;
         position: relative; 
+        transition: transform 0.5s ease-in-out;
     
         &::before {
         content: attr(data-tooltip);
@@ -82,9 +84,13 @@ const Counter = () =>{
      
         }
 
+        &:hover {
+            transform: scale(1.1); 
+          }
 
         &:hover::before {
             opacity: .75;
+            font-weight: bold;
             visibility: visible;
             transform: translateX(-50%) translateY(-5px); 
             }
